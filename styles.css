@@ -2,8 +2,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #0d0d1a; /* Очень темный синий */
-    color: #c4d7e7; /* Светло-голубой текст */
+    background-color: #0b0f19;
+    color: #e0e7ff;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -15,129 +15,119 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 30px 60px;
-    background-color: #1a1a2e; /* Темный синий */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    background-color: rgba(18, 23, 38, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .logo {
-    font-family: 'Orbitron', sans-serif; /* Футуристичный шрифт */
+    font-family: 'Orbitron', sans-serif;
     font-size: 32px;
     font-weight: 700;
-    color: #4b8afe; /* Ярко-синий */
-    text-shadow: 0 0 10px rgba(75, 138, 254, 0.8);
+    color: #00e5ff;
+    text-shadow: 0 0 15px #00e5ff, 0 0 20px #00e5ff;
 }
 
 .nav-link {
     font-family: 'Orbitron', sans-serif;
-    color: #8c92a6; /* Серый */
+    color: #92a4b8;
     text-decoration: none;
     margin-left: 35px;
     font-size: 19px;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .nav-link:hover {
-    color: #4b8afe;
-    text-shadow: 0 0 5px #4b8afe;
+    color: #00e5ff;
+    text-shadow: 0 0 5px #00e5ff;
 }
 
 .hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 150px 60px;
-    background: #1a1a2e;
+    background: #0b0f19;
     text-align: center;
-    color: #e0f0ff;
+    color: #e0e7ff;
     position: relative;
     overflow: hidden;
-    animation: fadeIn 2s ease-in-out;
 }
 
-.hero::before {
-    content: '';
+.particles-js {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(75, 138, 254, 0.1) 0%, rgba(26, 26, 46, 0) 70%);
-    animation: hero-pulse 8s infinite;
-}
-
-@keyframes hero-pulse {
-    0% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.1); opacity: 0.7; }
-    100% { transform: scale(1); opacity: 0.5; }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    z-index: 1;
 }
 
 .hero-text {
-    max-width: 800px;
-    z-index: 10;
+    max-width: 900px;
+    z-index: 2;
+    position: relative;
 }
 
 .hero-text h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 68px;
+    font-size: 72px;
     margin-bottom: 25px;
-    color: #4b8afe;
-    text-shadow: 0 0 15px rgba(75, 138, 254, 0.9);
+    color: #00e5ff;
+    text-shadow: 0 0 20px #00e5ff, 0 0 30px #00e5ff;
     animation: textGlow 3s infinite alternate;
 }
 
 .hero-text p {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 50px;
     color: #c4d7e7;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes textGlow {
-    from { text-shadow: 0 0 10px #4b8afe; }
-    to { text-shadow: 0 0 20px #4b8afe, 0 0 30px #4b8afe; }
+    from { text-shadow: 0 0 10px #00e5ff; }
+    to { text-shadow: 0 0 20px #00e5ff, 0 0 30px #00e5ff; }
 }
 
 .btn {
     display: inline-block;
     padding: 18px 45px;
-    background-color: #4b8afe;
-    color: #fff;
+    background-color: #00e5ff;
+    color: #0b0f19;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
     font-size: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 15px rgba(75, 138, 254, 0.5);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.5);
     border: none;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #3b74d4;
+    background-color: #00c7e5;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(75, 138, 254, 0.7);
+    box-shadow: 0 6px 25px rgba(0, 229, 255, 0.7);
 }
 
 .section {
     padding: 100px 60px;
     text-align: center;
-    background-color: #0d0d1a;
-    border-bottom: 1px solid #1a1a2e;
+    background-color: #0b0f19;
+    position: relative;
 }
 
 .section h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 42px;
     margin-bottom: 60px;
-    color: #4b8afe;
-    text-shadow: 0 0 10px rgba(75, 138, 254, 0.6);
+    color: #00e5ff;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
 }
 
 .features-grid, .pricing-grid {
@@ -150,20 +140,21 @@ body {
     background-color: #1a1a2e;
     padding: 40px;
     border-radius: 12px;
-    border: 1px solid #2a2a47;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #2d3b50;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .feature-item:hover, .pricing-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 15px rgba(75, 138, 254, 0.5);
+    border-color: #00e5ff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 229, 255, 0.5);
 }
 
 .feature-item h3, .pricing-card h3 {
     font-family: 'Orbitron', sans-serif;
     font-size: 26px;
-    color: #c4d7e7;
+    color: #e0e7ff;
     margin-bottom: 20px;
 }
 
@@ -171,14 +162,14 @@ body {
     font-family: 'Orbitron', sans-serif;
     font-size: 48px;
     font-weight: 700;
-    color: #4b8afe;
+    color: #00e5ff;
     margin: 30px 0;
-    text-shadow: 0 0 10px rgba(75, 138, 254, 0.7);
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
 }
 
 .btn-buy, .btn-discord {
-    background-color: #4b8afe;
-    color: #fff;
+    background-color: #00e5ff;
+    color: #0b0f19;
     padding: 15px 35px;
     font-size: 18px;
     border-radius: 8px;
@@ -187,23 +178,24 @@ body {
 }
 
 .btn-buy:hover, .btn-discord:hover {
-    background-color: #3b74d4;
+    background-color: #00c7e5;
     transform: translateY(-3px);
 }
 
 .btn-discord {
-    background-color: #7289da;
+    background-color: #5865f2;
+    color: #ffffff;
 }
 
 .btn-discord:hover {
-    background-color: #5865f2;
+    background-color: #434dce;
 }
 
 .footer {
     text-align: center;
     padding: 30px 0;
     background-color: #1a1a2e;
-    border-top: 1px solid #2a2a47;
-    color: #8c92a6;
+    border-top: 1px solid #2d3b50;
+    color: #92a4b8;
     font-size: 16px;
 }
